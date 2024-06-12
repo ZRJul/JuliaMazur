@@ -251,7 +251,7 @@ const makeTexts = {
     },
     "make_box_02": {
         en: "Let’s make your",
-        ua: "Давайте зробимо ваш",
+        ua: "Зробимо ваш",
     },
     "make_box_03": {
         en: "Website shine",

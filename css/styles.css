@@ -233,12 +233,20 @@ header #toggle {
 .icons_section {
   padding-top: 100px;
 }
-.icons_section .container {
+.icons_section .swiper-wrapper {
   justify-content: space-between;
+}
+.icons_section .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+.icons_section .swiper-slide {
+  width: 0;
 }
 .icons_section .icon_box {
   gap: 10px;
   align-items: center;
+  width: auto;
 }
 .icons_section .icon_box .icon_img {
   width: 24px;
