@@ -250,12 +250,12 @@ const makeTexts = {
         ua: "Замислили проект?",
     },
     "make_box_02": {
-        en: "Let’s make your",
-        ua: "Зробимо ваш",
+        en: "Let’s make website",
+        ua: "Давайте зробимо сайт",
     },
     "make_box_03": {
-        en: "Website shine",
-        ua: "сайт сяючим",
+        en: "that leaves a lasting impression!",
+        ua: "який залишає незабутнє враження!",
     },
     "make_box_04": {
         en: "Front end development to help you and your business stand out",

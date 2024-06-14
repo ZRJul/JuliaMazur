@@ -503,9 +503,24 @@ header {
     display: flex;
     gap: 80px;
 
+    .step_block_content_empty{
+      max-width: 600px;
+      width: 100%;
+
+      @include max-screen(1279px) {
+        display: none;
+      }
+    }
+
     .step_block_content {
       max-width: 600px;
       width: 100%;
+
+      @include max-screen(1279px) {
+        order: 2;
+        max-width: 1200px;
+        margin-bottom: 20px;
+      }
 
       .step_block_text {
         border-radius: 2px;
@@ -531,6 +546,10 @@ header {
           line-height: 130%;
           text-transform: uppercase;
           margin-bottom: 16px;
+
+          @include max-screen(767px){
+            font-size: 20px;
+          }
         }
 
         p {
@@ -539,6 +558,10 @@ header {
           font-size: 16px;
           line-height: 160%;
           margin-bottom: 32px;
+
+          @include max-screen(767px){
+            font-size: 14px;
+          }
         }
 
         ul {
@@ -562,12 +585,20 @@ header {
 
     .step_block_number {
 
+      @include max-screen(1279px) {
+        order: 1;
+      }
+
       .line {
         background-color: $border_color;
         width: 1px;
         margin: auto;
         max-height: 250px;
         height: 100%;
+
+        @include max-screen(1279px) {
+          max-height: 220px;
+        }
       }
 
       .line_zero {
@@ -595,26 +626,6 @@ header {
           line-height: 120%;
         }
       }
-    }
-  }
-
-  .process_end {
-    text-align: center;
-    margin-top: 72px;
-
-    h3 {
-      @include onest;
-      color: $main_color;
-      font-size: 40px;
-      letter-spacing: 1px;
-      line-height: 120%;
-    }
-
-    h4 {
-      @include noto;
-      color: $main_color;
-      font-size: 48px;
-      line-height: 130%;
     }
   }
 }

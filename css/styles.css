@@ -447,9 +447,25 @@ header #toggle {
   display: flex;
   gap: 80px;
 }
+.process .step_block .step_block_content_empty {
+  max-width: 600px;
+  width: 100%;
+}
+@media screen and (max-width: 1279px) {
+  .process .step_block .step_block_content_empty {
+    display: none;
+  }
+}
 .process .step_block .step_block_content {
   max-width: 600px;
   width: 100%;
+}
+@media screen and (max-width: 1279px) {
+  .process .step_block .step_block_content {
+    order: 2;
+    max-width: 1200px;
+    margin-bottom: 20px;
+  }
 }
 .process .step_block .step_block_content .step_block_text {
   border-radius: 2px;
@@ -479,6 +495,11 @@ header #toggle {
   text-transform: uppercase;
   margin-bottom: 16px;
 }
+@media screen and (max-width: 767px) {
+  .process .step_block .step_block_content .step_block_text h3 {
+    font-size: 20px;
+  }
+}
 .process .step_block .step_block_content .step_block_text p {
   font-family: "Comfortaa", sans-serif;
   font-style: normal;
@@ -487,6 +508,11 @@ header #toggle {
   font-size: 16px;
   line-height: 160%;
   margin-bottom: 32px;
+}
+@media screen and (max-width: 767px) {
+  .process .step_block .step_block_content .step_block_text p {
+    font-size: 14px;
+  }
 }
 .process .step_block .step_block_content .step_block_text ul {
   gap: 16px;
@@ -504,12 +530,22 @@ header #toggle {
 .process .step_block .step_block_content .step_block_text ul li:not(:last-child) {
   margin-bottom: 16px;
 }
+@media screen and (max-width: 1279px) {
+  .process .step_block .step_block_number {
+    order: 1;
+  }
+}
 .process .step_block .step_block_number .line {
   background-color: #343230;
   width: 1px;
   margin: auto;
   max-height: 250px;
   height: 100%;
+}
+@media screen and (max-width: 1279px) {
+  .process .step_block .step_block_number .line {
+    max-height: 220px;
+  }
 }
 .process .step_block .step_block_number .line_zero {
   width: 1px;
@@ -535,27 +571,6 @@ header #toggle {
   color: #DAC5A7;
   letter-spacing: 1.5px;
   line-height: 120%;
-}
-.process .process_end {
-  text-align: center;
-  margin-top: 72px;
-}
-.process .process_end h3 {
-  font-family: "Onest", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: #DAC5A7;
-  font-size: 40px;
-  letter-spacing: 1px;
-  line-height: 120%;
-}
-.process .process_end h4 {
-  font-family: "Noto Serif SemiCondensed", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: #DAC5A7;
-  font-size: 48px;
-  line-height: 130%;
 }
 
 .work {
