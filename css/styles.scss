@@ -1,8 +1,5 @@
 //fonts
 
-
-
-
 @font-face {
   font-family: 'Comfortaa';
   src: url('../fonts/Comfortaa-Light.ttf') format('truetype');
@@ -19,7 +16,6 @@
   font-style: normal;
 }
 
-
 @font-face {
   font-family: 'Noto Serif SemiCondensed';
   src: url('../fonts/NotoSerif-SemiCondensedExtraLightItalic.ttf') format('truetype');
@@ -27,14 +23,6 @@
   font-display: swap;
   font-style: normal;
 }
-
-
-
-
-
-
-
-
 
 @mixin comfortaa {
   font-family: 'Comfortaa', sans-serif;
@@ -80,13 +68,25 @@ $main_color: #DAC5A7;
 $hover_color: #D5C8B6FF;
 $border_color: #343230;
 
+
 * {
   padding: 0;
   margin: 0;
+
+
 }
 
 body {
   background-color: $body_color;
+
+  @include max-screen(1450px) {
+    padding: 0 20px;
+  }
+
+  @include max-screen(450px) {
+    padding: 0 10px;
+  }
+
 }
 
 .d-flex {
@@ -105,11 +105,20 @@ header {
   margin-top: 20px;
   backdrop-filter: blur(30px);
 
+  @include max-screen(1450px) {
+    width: calc(100% - 40px);
+  }
+
+  @include max-screen(450px) {
+    width: calc(100% - 20px);
+  }
+
   .container {
     background-color: rgba(218, 197, 167, .05);
     padding: 12px 30px;
     border: 0.5px solid $border_color;
     justify-content: space-between;
+    box-sizing: border-box;
 
     .header_logo {
       a {
@@ -288,6 +297,14 @@ header {
       color: $main_color;
       font-size: 118px;
       line-height: 110%;
+
+      @include max-screen(1200px) {
+        font-size: 80px;
+      }
+
+      @include max-screen(767px) {
+        font-size: 64px;
+      }
     }
 
     h2 {
@@ -296,6 +313,14 @@ header {
       font-size: 118px;
       line-height: 110%;
       margin-bottom: 22px;
+
+      @include max-screen(1200px) {
+        font-size: 80px;
+      }
+
+      @include max-screen(767px) {
+        font-size: 64px;
+      }
     }
 
     p {
@@ -305,6 +330,10 @@ header {
       line-height: 150%;
       max-width: 700px;
       margin: auto;
+
+      @include max-screen(767px) {
+        font-size: 18px;
+      }
     }
   }
 }
@@ -354,6 +383,10 @@ header {
     justify-content: space-between;
     gap: 32px;
 
+    @include min-screen(1279px) {
+      display: flex;
+    }
+
     .services_box {
       max-width: 400px;
       width: 100%;
@@ -361,11 +394,20 @@ header {
       background-color: rgba(218, 197, 167, .05);
       border: 0.5px solid $border_color;
 
+
+      @include max-screen(1279px) {
+        max-width: 1200px;
+        box-sizing: border-box;
+        padding: 40px;
+        margin-bottom: 16px;
+      }
+
       h4 {
         @include onest;
         color: $main_color;
         opacity: 0.6;
         font-size: 13px;
+        font-weight: 600;
         letter-spacing: 1.5px;
         line-height: 120%;
       }
@@ -379,6 +421,10 @@ header {
         text-transform: uppercase;
         padding-top: 10px;
         padding-bottom: 20px;
+
+        @include max-screen(767px) {
+          font-size: 20px;
+        }
       }
 
       p {
@@ -386,6 +432,10 @@ header {
         color: $main_color;
         font-size: 16px;
         line-height: 160%;
+
+        @include max-screen(767px) {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -402,10 +452,15 @@ header {
       @include onest;
       color: $main_color;
       font-size: 13px;
+      font-weight: 600;
       letter-spacing: 1.5px;
       line-height: 120%;
       text-transform: uppercase;
       margin-bottom: 16px;
+
+      @include max-screen(767px) {
+        font-weight: 400;
+      }
     }
 
     h2 {
@@ -413,6 +468,14 @@ header {
       color: $main_color;
       font-size: 96px;
       line-height: 110%;
+
+      @include max-screen(1200px) {
+        font-size: 80px;
+      }
+
+      @include max-screen(767px) {
+        font-size: 56px;
+      }
     }
 
     h3 {
@@ -421,6 +484,14 @@ header {
       font-size: 96px;
       line-height: 110%;
       margin-bottom: 16px;
+
+      @include max-screen(1200px) {
+        font-size: 80px;
+      }
+
+      @include max-screen(767px) {
+        font-size: 56px;
+      }
     }
   }
 
@@ -652,8 +723,6 @@ header {
   }
 }
 
-
-
 .about {
   padding-top: 96px;
   padding-bottom: 160px;
@@ -771,6 +840,7 @@ header {
       @include onest;
       color: $main_color;
       font-size: 13px;
+      font-weight: 600;
       letter-spacing: 1.5px;
       line-height: 120%;
       text-transform: uppercase;
@@ -813,6 +883,7 @@ header {
       @include onest;
       color: $body_color;
       font-size: 13px;
+      font-weight: 600;
       letter-spacing: 1.5px;
       line-height: 150%;
       text-transform: uppercase;
