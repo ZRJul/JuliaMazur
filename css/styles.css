@@ -337,6 +337,11 @@ header #toggle {
     margin-bottom: 16px;
   }
 }
+@media screen and (max-width: 600px) {
+  .services .container .services_box {
+    padding: 28px;
+  }
+}
 .services .container .services_box h4 {
   font-family: "Onest", sans-serif;
   font-style: normal;
@@ -447,6 +452,11 @@ header #toggle {
   display: flex;
   gap: 80px;
 }
+@media screen and (max-width: 767px) {
+  .process .step_block {
+    gap: 24px;
+  }
+}
 .process .step_block .step_block_content_empty {
   max-width: 600px;
   width: 100%;
@@ -472,6 +482,11 @@ header #toggle {
   padding: 48px;
   border: 1px solid #343230;
   background-color: rgba(218, 197, 167, 0.05);
+}
+@media screen and (max-width: 600px) {
+  .process .step_block .step_block_content .step_block_text {
+    padding: 28px;
+  }
 }
 .process .step_block .step_block_content .step_block_text h4 {
   font-family: "Onest", sans-serif;
@@ -539,12 +554,32 @@ header #toggle {
   background-color: #343230;
   width: 1px;
   margin: auto;
-  max-height: 250px;
+  max-height: 200px;
   height: 100%;
 }
 @media screen and (max-width: 1279px) {
   .process .step_block .step_block_number .line {
     max-height: 220px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .process .step_block .step_block_number .line {
+    max-height: 270px;
+  }
+}
+@media screen and (max-width: 465px) {
+  .process .step_block .step_block_number .line {
+    max-height: 300px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .process .step_block .step_block_number .line {
+    max-height: 350px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .process .step_block .step_block_number .line {
+    max-height: 390px;
   }
 }
 .process .step_block .step_block_number .line_zero {
@@ -588,10 +623,20 @@ header #toggle {
   letter-spacing: 1px;
   line-height: 120%;
 }
+@media screen and (max-width: 767px) {
+  .work .work_text h3 {
+    font-size: 32px;
+    text-align: center;
+  }
+}
 .work .work_panel {
   margin-top: 32px;
   gap: 32px;
-  flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .work .work_panel {
+    flex-wrap: wrap;
+  }
 }
 .work .work_panel .work_panel_box {
   max-width: 680px;
@@ -606,6 +651,7 @@ header #toggle {
   max-height: 513px;
   overflow: hidden;
   opacity: 0.2;
+  position: relative;
 }
 .work .work_panel .work_panel_box .work_img:hover {
   overflow-y: auto;
@@ -627,8 +673,13 @@ header #toggle {
   width: 100%;
   display: block;
 }
-.work .work_panel .work_panel_box .work_description {
-  margin: 0 24px;
+.work .work_panel .work_panel_box .work_content {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.work .work_panel .work_panel_box .work_content .work_description {
   background-color: rgba(218, 197, 167, 0.05);
   backdrop-filter: blur(30px);
   border-radius: 2px;
@@ -636,12 +687,10 @@ header #toggle {
   padding: 12px 16px;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  bottom: 24px;
   max-width: 604px;
-  width: 100%;
+  margin: 24px;
 }
-.work .work_panel .work_panel_box .work_description h4 {
+.work .work_panel .work_panel_box .work_content .work_description h4 {
   font-family: "Onest", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -649,12 +698,13 @@ header #toggle {
   font-size: 24px;
   line-height: 130%;
 }
-.work .work_panel .work_panel_box .work_description a {
+.work .work_panel .work_panel_box .work_content .work_description a {
   font-family: "Onest", sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #DAC5A7;
   font-size: 13px;
+  font-weight: 600;
   letter-spacing: 1.5px;
   line-height: 120%;
   text-transform: uppercase;
@@ -665,7 +715,7 @@ header #toggle {
   background-size: 0% 1px;
   transition: background-size 0.3s;
 }
-.work .work_panel .work_panel_box .work_description a:hover {
+.work .work_panel .work_panel_box .work_content .work_description a:hover {
   background-size: 100% 1px;
 }
 
