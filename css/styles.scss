@@ -79,6 +79,19 @@ $border_color: #343230;
 body {
   background-color: $body_color;
 
+
+
+}
+
+.d-flex {
+  display: flex;
+
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+
   @include max-screen(1450px) {
     padding: 0 20px;
   }
@@ -86,16 +99,6 @@ body {
   @include max-screen(450px) {
     padding: 0 10px;
   }
-
-}
-
-.d-flex {
-  display: flex;
-}
-
-.container {
-  max-width: 1400px;
-  margin: auto;
 }
 
 header {
@@ -105,9 +108,6 @@ header {
   margin-top: 20px;
   backdrop-filter: blur(30px);
 
-  @include max-screen(1450px) {
-    width: calc(100% - 40px);
-  }
 
   @include max-screen(450px) {
     width: calc(100% - 20px);
@@ -604,11 +604,31 @@ header {
         background-color: $border_color;
         width: 1px;
         margin: auto;
-        max-height: 200px;
+        max-height: 220px;
         height: 100%;
 
+        @include max-screen(1440px) {
+          max-height: 230px;
+        }
+
+        @include max-screen(1325px) {
+          max-height: 250px;
+        }
+
         @include max-screen(1279px) {
-          max-height: 220px;
+          max-height: 180px;
+        }
+
+        @include max-screen(1101px) {
+          max-height: 210px;
+        }
+
+        @include max-screen(940px) {
+          max-height: 230px;
+        }
+
+        @include max-screen(645px) {
+          max-height: 250px;
         }
 
         @include max-screen(580px) {
@@ -634,6 +654,10 @@ header {
         width: 1px;
         margin: auto;
         height: 167px;
+
+        @include max-screen(1279px) {
+          max-height: 140px;
+        }
       }
 
       .number {
@@ -695,11 +719,13 @@ header {
       border: 1px solid rgba(218, 197, 167, 0.15);
       opacity: 1;
       position: relative;
+      height: min-content;
+
 
 
       .work_img{
-        max-width: 684px;
-        max-height: 513px;
+        max-width: 680px;
+        max-height: 500px;
         overflow: hidden;
         opacity: 0.2;
         position: relative;
@@ -724,14 +750,33 @@ header {
           border-radius: 5px; /* Опционально: стиль и размер полосы прокрутки */
         }
 
+        @include max-screen(1400px) {
+          max-height: 460px;
+        }
+
+        @include max-screen(1200px){
+          max-height: 420px;
+        }
+
+        @include screen(767px, 1001px){
+          max-height: 380px;
+        }
+
+        @include max-screen(550px){
+          max-height: 350px;
+        }
+
+        @include max-screen(450px){
+          max-height: 300px;
+        }
+
         img{
           width: 100%;
           //height: 100%;
           display: block;
         }
-
-
       }
+
       .work_content{
         position: absolute;
         width: 100%;
@@ -755,6 +800,10 @@ header {
             color: $main_color;
             font-size: 24px;
             line-height: 130%;
+
+            @include max-screen(767px){
+              font-size: 20px;
+            }
           }
 
           a {
@@ -775,6 +824,10 @@ header {
             &:hover {
               background-size: 100% 1px;
             }
+
+            @include max-screen(767px){
+              font-weight: 400;
+            }
           }
         }
       }
@@ -788,16 +841,40 @@ header {
 
   .about_photo {
     gap: 32px;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 64px;
+
+    @include min-screen(767px){
+      .second_name{
+        display: none;
+      }
+    }
+
+    @include max-screen(767px){
+      justify-content: center;
+      .l_name{
+        display: none;
+      }
+    }
+
 
     p {
       @include noto;
       color: $main_color;
-      font-size: 144px;
+      font-size: 124px;
       letter-spacing: -1px;
       line-height: 95%;
+
+      @include max-screen(1200px){
+        font-size: 80px;
+      }
+
+      @include max-screen(767px){
+        font-size: 42px;
+      }
     }
+
+
   }
 
   .about_description {
@@ -805,12 +882,22 @@ header {
     margin: auto;
     text-align: center;
 
+    .about_description_text{
+      @include max-screen(620px){
+        padding: 0 20px;
+      }
+    }
+
     p {
       @include comfortaa;
       color: $main_color;
       font-size: 18px;
       line-height: 160%;
       margin-bottom: 32px;
+
+      @include max-screen(1200px){
+        font-size: 16px;
+      }
     }
   }
 
@@ -845,12 +932,19 @@ header {
     border-bottom: 1px solid $border_color;
     overflow: hidden;
 
+    .swiper-wrapper {
+      justify-content: space-between;
+    }
+    .swiper-wrapper {
+      -webkit-transition-timing-function: linear !important;
+      transition-timing-function: linear !important;
+    }
+
     .ticker {
       width: 100%;
       white-space: nowrap;
       padding: 16px 0;
       gap: 32px;
-      justify-content: center;
 
       p {
         @include onest;
@@ -860,35 +954,12 @@ header {
         line-height: 120%;
         text-transform: uppercase;
       }
-    }
 
-    .tick1 {
-      animation: marquee1 20s infinite linear;
-      animation-delay: -20s;
-    }
-
-    .tick2 {
-      animation: marquee2 20s infinite linear;
-      animation-delay: -10s;
-    }
-
-    @keyframes marquee1 {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
+      .ticker_swiper_slide {
+        gap: 50px;
       }
     }
 
-    @keyframes marquee2 {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-200%);
-      }
-    }
   }
 
   .make_box {
@@ -909,17 +980,35 @@ header {
     h3 {
       @include onest;
       color: $main_color;
-      font-size: 128px;
+      font-size: 98px;
       line-height: 110%;
       margin-bottom: 16px;
+
+      @include max-screen(1200px){
+        font-size: 80px;
+      }
+
+      @include max-screen(900px) {
+        font-size: 54px;
+      }
     }
 
     h4{
       @include noto;
       color: $main_color;
-      font-size: 128px;
+      font-size: 98px;
       line-height: 110%;
-      margin-bottom: 16px;
+      max-width: 1100px;
+      padding-bottom: 30px;
+      margin: auto;
+
+      @include max-screen(1000px){
+        font-size: 80px;
+      }
+
+      @include max-screen(900px) {
+        font-size: 54px;
+      }
     }
 
     h5 {
@@ -955,14 +1044,26 @@ footer {
   padding-top: 90px;
   padding-bottom: 45px;
 
+  @include max-screen(767px){
+    text-align: center;
+  }
+
   .footer_container {
     justify-content: space-between;
-    border-bottom: 1px solid $border_color;
     padding-bottom: 45px;
     align-items: center;
+
+    @include max-screen(767px){
+      display: inline-block;
+    }
   }
 
   .footer_logo {
+
+    @include max-screen(767px){
+      margin-bottom: 30px;
+    }
+
     a {
       text-decoration: none;
       @include comfortaa;
@@ -989,14 +1090,26 @@ footer {
     ul {
       gap: 40px;
 
+      @include max-screen(767px){
+        display: inline-block;
+      }
+
       li {
         list-style: none;
+
+        @include max-screen(767px){
+          margin-bottom: 20px;
+        }
       }
     }
   }
 
   .footer_icons {
     gap: 20px;
+
+    @include max-screen(767px){
+      justify-content: center;
+    }
 
     a {
       height: 40px;
@@ -1015,6 +1128,22 @@ footer {
     }
   }
 
+  .footer_design{
+    padding-top: 10px;
+    border-top: 1px solid $border_color;
+
+    p{
+      @include comfortaa;
+      color: $main_color;
+      font-size: 12px;
+      line-height: 14px;
+      span{
+        a{
+          color: $main_color;
+        }
+      }
+    }
+  }
 }
 
 

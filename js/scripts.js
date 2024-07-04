@@ -16,14 +16,14 @@ menuLinks.forEach(link => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    const swiperWrapper = document.querySelector('.swiper-wrapper');
-    const slides = document.querySelectorAll('.swiper-slide');
+    const swiperWrapper = document.querySelector('.icon_swiper_wrapper');
+    const slides = document.querySelectorAll('.icon_swiper_slide');
     slides.forEach(slide => {
         const clone = slide.cloneNode(true);
         swiperWrapper.appendChild(clone);
     });
 
-    let swiper = new Swiper('.swiper', {
+    let swiper = new Swiper('.icon_swiper', {
         loop: true,
         freeMode: true,
         slidesPerView: 6,
@@ -46,6 +46,37 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+});
 
+document.addEventListener('DOMContentLoaded', function () {
+    const swiperWrapper = document.querySelector('.ticker_swiper_wrapper');
+    const slides = document.querySelectorAll('.ticker_swiper_slide');
+    slides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        swiperWrapper.appendChild(clone);
+    });
 
+    let swiper = new Swiper('.ticker_swiper', {
+        loop: true,
+        freeMode: true,
+        slidesPerView: 8,
+        spaceBetween: 30,
+        speed: 2000,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        },
+
+        breakpoints:{
+            320:{
+                slidesPerView: 2,
+            },
+            480:{
+                slidesPerView: 4,
+            },
+            992:{
+                slidesPerView: 8,
+            }
+        }
+    });
 });

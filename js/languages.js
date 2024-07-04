@@ -239,7 +239,7 @@ const aboutTexts = {
         ua: "Мазур",
     },
     "about_description": {
-        en: "Hi, I'm Yulia Mazur - a freelancer specializing in creating modern, interactive and responsive web applications. I am passionate about creating unique and effective solutions for my clients and bring a personal touch to every project. My goal is to transform ideas into reality using cutting-edge technologies and best practices in web development. On this site you see examples of my projects, information about me and my contact details. Let's work together to bring your vision to life!",
+        en: "Hi, I'm Julia Mazur - a freelancer specializing in creating modern, interactive and responsive web applications. I am passionate about creating unique and effective solutions for my clients and bring a personal touch to every project. My goal is to transform ideas into reality using cutting-edge technologies and best practices in web development. On this site you see examples of my projects, information about me and my contact details. Let's work together to bring your vision to life!",
         ua: "Привіт, я Юлія Мазур - фрілансер, що спеціалізується на створенні сучасних, інтерактивних та адаптивних веб-додатків. Я захоплена створенням унікальних та ефективних рішень для своїх клієнтів і вношу індивідуальний підхід до кожного проекту. Моя мета — втілити ідеї в реальність, використовуючи передові технології та найкращі практики веб-розробки. На цьому сайті ви бачите приклади моїх проектів, інформацію про мене та мої контактні дані. Давайте працювати разом, щоб втілити ваше бачення в життя!",
     },
 };
