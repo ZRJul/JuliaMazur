@@ -59,9 +59,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let swiper = new Swiper('.ticker_swiper', {
         loop: true,
         freeMode: true,
-        slidesPerView: 8,
+        slidesPerView: 7,
         spaceBetween: 30,
         speed: 2000,
+        loopAdditionalSlides: 7,
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
@@ -75,7 +76,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 slidesPerView: 4,
             },
             992:{
-                slidesPerView: 8,
+                slidesPerView: 7,
+            }
+        },
+        on: {
+            init: function () {
+                this.autoplay.start();
+            },
+            transitionEnd: function() {
+                this.wrapperEl.style.transitionTimingFunction = 'linear';
             }
         }
     });

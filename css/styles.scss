@@ -80,7 +80,6 @@ body {
   background-color: $body_color;
 
 
-
 }
 
 .d-flex {
@@ -107,11 +106,6 @@ header {
   z-index: 9;
   margin-top: 20px;
   backdrop-filter: blur(30px);
-
-
-  @include max-screen(450px) {
-    width: calc(100% - 20px);
-  }
 
   .container {
     background-color: rgba(218, 197, 167, .05);
@@ -185,7 +179,8 @@ header {
 
   @include max-screen(767px) {
     #menu {
-      background-color: rgba(218, 197, 167, .05);
+      //background-color: rgba(218, 197, 167, .05);
+      background-color: #21201e;
       backdrop-filter: blur(30px);
       border: 0.5px solid $border_color;
       width: 100%;
@@ -341,9 +336,14 @@ header {
 .icons_section {
   padding-top: 100px;
 
+  @include max-screen(767px) {
+    padding-top: 65px;
+  }
+
   .swiper-wrapper {
     justify-content: space-between;
   }
+
   .swiper-wrapper {
     -webkit-transition-timing-function: linear !important;
     transition-timing-function: linear !important;
@@ -378,6 +378,10 @@ header {
 
 .services {
   padding-top: 100px;
+
+  @include max-screen(767px) {
+    padding-top: 65px;
+  }
 
   .container {
     justify-content: space-between;
@@ -447,6 +451,10 @@ header {
 .process {
   padding-top: 100px;
 
+  @include max-screen(767px){
+    padding-top: 65px;
+  }
+
   .process_title {
     text-align: center;
     padding-bottom: 40px;
@@ -486,7 +494,7 @@ header {
       color: $main_color;
       font-size: 96px;
       line-height: 110%;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
 
       @include max-screen(1200px) {
         font-size: 80px;
@@ -494,6 +502,17 @@ header {
 
       @include max-screen(767px) {
         font-size: 56px;
+      }
+    }
+
+    h4 {
+      @include comfortaa;
+      color: $main_color;
+      font-size: 20px;
+      line-height: 160%;
+
+      @include max-screen(767px) {
+        font-size: 18px;
       }
     }
   }
@@ -510,7 +529,7 @@ header {
       gap: 24px;
     }
 
-    .step_block_content_empty{
+    .step_block_content_empty {
       max-width: 600px;
       width: 100%;
 
@@ -558,7 +577,7 @@ header {
           text-transform: uppercase;
           margin-bottom: 16px;
 
-          @include max-screen(767px){
+          @include max-screen(767px) {
             font-size: 20px;
           }
         }
@@ -570,7 +589,7 @@ header {
           line-height: 160%;
           margin-bottom: 32px;
 
-          @include max-screen(767px){
+          @include max-screen(767px) {
             font-size: 14px;
           }
         }
@@ -686,6 +705,10 @@ header {
 .work {
   padding-top: 128px;
 
+  @include max-screen(767px){
+    padding-top: 65px;
+  }
+
   .work_text {
     padding: 0 32px;
 
@@ -709,6 +732,7 @@ header {
 
     @include max-screen(767px) {
       flex-wrap: wrap;
+      justify-content: center;
     }
 
 
@@ -722,15 +746,14 @@ header {
       height: min-content;
 
 
-
-      .work_img{
+      .work_img {
         max-width: 680px;
         max-height: 500px;
         overflow: hidden;
         opacity: 0.2;
         position: relative;
 
-        &:hover{
+        &:hover {
           overflow-y: auto;
           opacity: 1;
         }
@@ -754,30 +777,30 @@ header {
           max-height: 460px;
         }
 
-        @include max-screen(1200px){
+        @include max-screen(1200px) {
           max-height: 420px;
         }
 
-        @include screen(767px, 1001px){
+        @include screen(767px, 1001px) {
           max-height: 380px;
         }
 
-        @include max-screen(550px){
+        @include max-screen(550px) {
           max-height: 350px;
         }
 
-        @include max-screen(450px){
+        @include max-screen(450px) {
           max-height: 300px;
         }
 
-        img{
+        img {
           width: 100%;
           //height: 100%;
           display: block;
         }
       }
 
-      .work_content{
+      .work_content {
         position: absolute;
         width: 100%;
         bottom: 0;
@@ -801,7 +824,7 @@ header {
             font-size: 24px;
             line-height: 130%;
 
-            @include max-screen(767px){
+            @include max-screen(767px) {
               font-size: 20px;
             }
           }
@@ -825,7 +848,7 @@ header {
               background-size: 100% 1px;
             }
 
-            @include max-screen(767px){
+            @include max-screen(767px) {
               font-weight: 400;
             }
           }
@@ -839,20 +862,24 @@ header {
   padding-top: 96px;
   padding-bottom: 160px;
 
+  @include max-screen(767px){
+    padding: 65px 0;
+  }
+
   .about_photo {
     gap: 32px;
     justify-content: space-around;
     margin-bottom: 64px;
 
-    @include min-screen(767px){
-      .second_name{
+    @include min-screen(767px) {
+      .second_name {
         display: none;
       }
     }
 
-    @include max-screen(767px){
+    @include max-screen(767px) {
       justify-content: center;
-      .l_name{
+      .l_name {
         display: none;
       }
     }
@@ -865,11 +892,11 @@ header {
       letter-spacing: -1px;
       line-height: 95%;
 
-      @include max-screen(1200px){
+      @include max-screen(1200px) {
         font-size: 80px;
       }
 
-      @include max-screen(767px){
+      @include max-screen(767px) {
         font-size: 42px;
       }
     }
@@ -882,8 +909,8 @@ header {
     margin: auto;
     text-align: center;
 
-    .about_description_text{
-      @include max-screen(620px){
+    .about_description_text {
+      @include max-screen(620px) {
         padding: 0 20px;
       }
     }
@@ -895,7 +922,7 @@ header {
       line-height: 160%;
       margin-bottom: 32px;
 
-      @include max-screen(1200px){
+      @include max-screen(1200px) {
         font-size: 16px;
       }
     }
@@ -935,9 +962,11 @@ header {
     .swiper-wrapper {
       justify-content: space-between;
     }
+
     .swiper-wrapper {
       -webkit-transition-timing-function: linear !important;
       transition-timing-function: linear !important;
+      will-change: transform;
     }
 
     .ticker {
@@ -966,6 +995,16 @@ header {
     padding: 160px 0;
     text-align: center;
 
+    @include max-screen(767px){
+      padding: 65px 0;
+    }
+
+    .make_box_content{
+      @include max-screen(767px){
+        padding: 0 20px;
+      }
+    }
+
     p {
       @include onest;
       color: $main_color;
@@ -982,9 +1021,9 @@ header {
       color: $main_color;
       font-size: 98px;
       line-height: 110%;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
 
-      @include max-screen(1200px){
+      @include max-screen(1200px) {
         font-size: 80px;
       }
 
@@ -993,7 +1032,7 @@ header {
       }
     }
 
-    h4{
+    h4 {
       @include noto;
       color: $main_color;
       font-size: 98px;
@@ -1002,7 +1041,7 @@ header {
       padding-bottom: 30px;
       margin: auto;
 
-      @include max-screen(1000px){
+      @include max-screen(1000px) {
         font-size: 80px;
       }
 
@@ -1044,8 +1083,9 @@ footer {
   padding-top: 90px;
   padding-bottom: 45px;
 
-  @include max-screen(767px){
+  @include max-screen(767px) {
     text-align: center;
+    padding-top: 65px;
   }
 
   .footer_container {
@@ -1053,14 +1093,14 @@ footer {
     padding-bottom: 45px;
     align-items: center;
 
-    @include max-screen(767px){
+    @include max-screen(767px) {
       display: inline-block;
     }
   }
 
   .footer_logo {
 
-    @include max-screen(767px){
+    @include max-screen(767px) {
       margin-bottom: 30px;
     }
 
@@ -1090,14 +1130,14 @@ footer {
     ul {
       gap: 40px;
 
-      @include max-screen(767px){
+      @include max-screen(767px) {
         display: inline-block;
       }
 
       li {
         list-style: none;
 
-        @include max-screen(767px){
+        @include max-screen(767px) {
           margin-bottom: 20px;
         }
       }
@@ -1107,7 +1147,7 @@ footer {
   .footer_icons {
     gap: 20px;
 
-    @include max-screen(767px){
+    @include max-screen(767px) {
       justify-content: center;
     }
 
@@ -1128,17 +1168,18 @@ footer {
     }
   }
 
-  .footer_design{
+  .footer_design {
     padding-top: 10px;
     border-top: 1px solid $border_color;
 
-    p{
+    p {
       @include comfortaa;
       color: $main_color;
       font-size: 12px;
       line-height: 14px;
-      span{
-        a{
+
+      span {
+        a {
           color: $main_color;
         }
       }

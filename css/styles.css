@@ -55,11 +55,6 @@ header {
   margin-top: 20px;
   backdrop-filter: blur(30px);
 }
-@media screen and (max-width: 450px) {
-  header {
-    width: calc(100% - 20px);
-  }
-}
 header .container {
   background-color: rgba(218, 197, 167, 0.05);
   padding: 12px 30px;
@@ -125,7 +120,7 @@ header #toggle {
 }
 @media screen and (max-width: 767px) {
   header #menu {
-    background-color: rgba(218, 197, 167, 0.05);
+    background-color: #21201e;
     backdrop-filter: blur(30px);
     border: 0.5px solid #343230;
     width: 100%;
@@ -274,6 +269,11 @@ header #toggle {
 .icons_section {
   padding-top: 100px;
 }
+@media screen and (max-width: 767px) {
+  .icons_section {
+    padding-top: 65px;
+  }
+}
 .icons_section .swiper-wrapper {
   justify-content: space-between;
 }
@@ -307,6 +307,11 @@ header #toggle {
 
 .services {
   padding-top: 100px;
+}
+@media screen and (max-width: 767px) {
+  .services {
+    padding-top: 65px;
+  }
 }
 .services .container {
   justify-content: space-between;
@@ -382,6 +387,11 @@ header #toggle {
 .process {
   padding-top: 100px;
 }
+@media screen and (max-width: 767px) {
+  .process {
+    padding-top: 65px;
+  }
+}
 .process .process_title {
   text-align: center;
   padding-bottom: 40px;
@@ -428,7 +438,7 @@ header #toggle {
   color: #DAC5A7;
   font-size: 96px;
   line-height: 110%;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 1200px) {
   .process .process_title h3 {
@@ -438,6 +448,19 @@ header #toggle {
 @media screen and (max-width: 767px) {
   .process .process_title h3 {
     font-size: 56px;
+  }
+}
+.process .process_title h4 {
+  font-family: "Comfortaa", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #DAC5A7;
+  font-size: 20px;
+  line-height: 160%;
+}
+@media screen and (max-width: 767px) {
+  .process .process_title h4 {
+    font-size: 18px;
   }
 }
 .process .process_steps {
@@ -636,6 +659,11 @@ header #toggle {
 .work {
   padding-top: 128px;
 }
+@media screen and (max-width: 767px) {
+  .work {
+    padding-top: 65px;
+  }
+}
 .work .work_text {
   padding: 0 32px;
 }
@@ -661,6 +689,7 @@ header #toggle {
 @media screen and (max-width: 767px) {
   .work .work_panel {
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .work .work_panel .work_panel_box {
@@ -784,6 +813,11 @@ header #toggle {
   padding-top: 96px;
   padding-bottom: 160px;
 }
+@media screen and (max-width: 767px) {
+  .about {
+    padding: 65px 0;
+  }
+}
 .about .about_photo {
   gap: 32px;
   justify-content: space-around;
@@ -879,6 +913,7 @@ header #toggle {
 .make .ticker_box .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
+  will-change: transform;
 }
 .make .ticker_box .ticker {
   width: 100%;
@@ -903,6 +938,16 @@ header #toggle {
   padding: 160px 0;
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  .make .make_box {
+    padding: 65px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .make .make_box .make_box_content {
+    padding: 0 20px;
+  }
+}
 .make .make_box p {
   font-family: "Onest", sans-serif;
   font-style: normal;
@@ -922,7 +967,7 @@ header #toggle {
   color: #DAC5A7;
   font-size: 98px;
   line-height: 110%;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 1200px) {
   .make .make_box h3 {
@@ -992,6 +1037,7 @@ footer {
 @media screen and (max-width: 767px) {
   footer {
     text-align: center;
+    padding-top: 65px;
   }
 }
 footer .footer_container {
