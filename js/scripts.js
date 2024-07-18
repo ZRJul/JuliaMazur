@@ -15,6 +15,45 @@ menuLinks.forEach(link => {
     });
 });
 
+//animation
+const animItems = document.querySelectorAll('._anim-items');
+
+if (animItems.length > 0){
+    window.addEventListener('scroll', animOnScroll)
+    function animOnScroll(params){
+        for (let index = 0; index < animItems.length; index++){
+            const animItem = animItems[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if ((window.scrollY > animItemOffset - animItemPoint) && window.scrollY < (animItemOffset + animItemHeight)){
+                animItem.classList.add('_active');
+            } else {
+                if (!animItem.classList.contains('_anim-no-hide')){
+                    animItem.classList.remove('_active');
+                }
+            }
+        }
+    }
+
+    function offset(el){
+        const rect = el.getBoundingClientRect(),
+            scrollLeft = window.window.scrollX || document.documentElement.scrollLeft,
+            scrollTop = window.window.scrollY || document.documentElement.scrollTop;
+        return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+    }
+
+    setTimeout(()=> {
+        animOnScroll();
+    }, 300)
+
+}
 document.addEventListener('DOMContentLoaded', function () {
     const swiperWrapper = document.querySelector('.icon_swiper_wrapper');
     const slides = document.querySelectorAll('.icon_swiper_slide');
@@ -89,3 +128,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+

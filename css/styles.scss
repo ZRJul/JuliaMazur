@@ -100,6 +100,18 @@ body {
   }
 }
 
+._anim-show{
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+._anim-show._active,
+._active._anim-show{
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -292,7 +304,6 @@ header {
       color: $main_color;
       font-size: 118px;
       line-height: 110%;
-
       @include max-screen(1200px) {
         font-size: 80px;
       }
@@ -397,6 +408,11 @@ header {
       padding: 48px;
       background-color: rgba(218, 197, 167, .05);
       border: 0.5px solid $border_color;
+      overflow: hidden;
+
+      transform: translateY(50px);
+      opacity: 0;
+      transition: all 0.9s ease 0s;
 
       @include max-screen(1279px) {
         max-width: 1200px;
@@ -444,6 +460,10 @@ header {
           font-size: 14px;
         }
       }
+    }
+    .services_box._active{
+      opacity: 1;
+      transform: translateY(0px);
     }
   }
 }
