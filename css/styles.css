@@ -49,15 +49,15 @@ body {
 }
 
 ._anim-show {
-  transform: translate(0px, 120%);
+  transform: translateY(50px);
   opacity: 0;
-  transition: all 0.8s ease 0s;
+  transition: all 0.9s ease 0s;
 }
 
 ._anim-show._active,
 ._active._anim-show {
   opacity: 1;
-  transform: translate(0px, 0px);
+  transform: translateY(0px);
 }
 
 header {
@@ -341,9 +341,6 @@ header #toggle {
   background-color: rgba(218, 197, 167, 0.05);
   border: 0.5px solid #343230;
   overflow: hidden;
-  transform: translateY(50px);
-  opacity: 0;
-  transition: all 0.9s ease 0s;
 }
 @media screen and (max-width: 1279px) {
   .services .container .services_box {
@@ -398,10 +395,6 @@ header #toggle {
   .services .container .services_box p {
     font-size: 14px;
   }
-}
-.services .container .services_box._active {
-  opacity: 1;
-  transform: translateY(0px);
 }
 
 .process {
@@ -985,18 +978,23 @@ header #toggle {
   font-style: normal;
   font-weight: 400;
   color: #DAC5A7;
-  font-size: 98px;
+  font-size: 80px;
   line-height: 110%;
   margin-bottom: 10px;
 }
 @media screen and (max-width: 1200px) {
   .make .make_box h3 {
-    font-size: 80px;
+    font-size: 62px;
   }
 }
 @media screen and (max-width: 900px) {
   .make .make_box h3 {
-    font-size: 54px;
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .make .make_box h3 {
+    font-size: 38px;
   }
 }
 .make .make_box h4 {
@@ -1004,7 +1002,7 @@ header #toggle {
   font-style: normal;
   font-weight: 400;
   color: #DAC5A7;
-  font-size: 98px;
+  font-size: 80px;
   line-height: 110%;
   max-width: 1100px;
   padding-bottom: 30px;
@@ -1012,12 +1010,17 @@ header #toggle {
 }
 @media screen and (max-width: 1000px) {
   .make .make_box h4 {
-    font-size: 80px;
+    font-size: 62px;
   }
 }
 @media screen and (max-width: 900px) {
   .make .make_box h4 {
-    font-size: 54px;
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .make .make_box h4 {
+    font-size: 38px;
   }
 }
 .make .make_box h5 {
@@ -1029,6 +1032,11 @@ header #toggle {
   color: #DAC5A7;
   font-size: 20px;
   line-height: 160%;
+}
+@media screen and (max-width: 1200px) {
+  .make .make_box h5 {
+    font-size: 16px;
+  }
 }
 .make .make_box a {
   text-decoration: none;
