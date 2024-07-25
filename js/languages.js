@@ -286,6 +286,33 @@ const footerTexts = {
     },
 };
 
+const modalText = {
+    "modal_title": {
+        en: "Let's get in touch",
+        ua: "Будемо на зв'язку",
+    },
+
+    "placeholder_name": {
+        en: "Name",
+        ua: "Ім'я"
+    },
+
+    "placeholder_email": {
+        en: "Email",
+        ua: "Електронна пошта"
+    },
+
+    "placeholder_message": {
+        en: "Message",
+        ua: "Повідомлення"
+    },
+
+    "modal_button": {
+        en: "Send Message",
+        ua: "Відправити повідомлення",
+    },
+}
+
 function changeLang() {
     for (const key in headerTexts) {
         let elem = document.querySelector(`[data-lang=${key}]`);
@@ -333,6 +360,18 @@ function changeLang() {
         let elem = document.querySelector(`[data-lang=${key}]`);
         if (elem) {
             elem.textContent = footerTexts[key][currentLang];
+        }
+    }
+
+
+    for (const key in modalText) {
+        let elem = document.querySelector(`[data-lang=${key}]`);
+        if (elem) {
+            if (key.startsWith("placeholder_")) {
+                elem.placeholder = modalText[key][currentLang];
+            } else {
+                elem.textContent = modalText[key][currentLang];
+            }
         }
     }
 }

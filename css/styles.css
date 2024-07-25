@@ -29,6 +29,10 @@ body {
   background-color: #0E0E0E;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .d-flex {
   display: flex;
 }
@@ -216,6 +220,10 @@ header #toggle {
   header #toggle span:after {
     top: 12px;
   }
+}
+
+header.hidden {
+  display: none;
 }
 
 .main_section {
@@ -906,6 +914,10 @@ header #toggle {
   align-items: center;
   justify-content: center;
 }
+.about .about_icons:hover {
+  background-color: rgba(218, 197, 167, 0.15);
+  border: 2px solid rgba(218, 197, 167, 0.15);
+}
 .about .about_icons img {
   width: 20px;
   height: 20px;
@@ -1056,16 +1068,17 @@ header #toggle {
   line-height: 150%;
   text-transform: uppercase;
 }
+.make .make_box a:hover {
+  background-color: #8a785f;
+}
 
 footer {
   background-color: rgba(218, 197, 167, 0.05);
-  padding-top: 90px;
   padding-bottom: 45px;
 }
 @media screen and (max-width: 767px) {
   footer {
     text-align: center;
-    padding-top: 65px;
   }
 }
 footer .footer_container {
@@ -1105,6 +1118,14 @@ footer .footer_menu a {
   line-height: 25px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.3s;
+}
+footer .footer_menu a:hover {
+  background-size: 100% 1px;
 }
 footer .footer_menu ul {
   gap: 40px;
@@ -1140,6 +1161,9 @@ footer .footer_icons a {
   align-items: center;
   justify-content: center;
 }
+footer .footer_icons a:hover {
+  background-color: rgba(218, 197, 167, 0.15);
+}
 footer .footer_icons a img {
   width: 20px;
   height: 20px;
@@ -1158,6 +1182,150 @@ footer .footer_design p {
 }
 footer .footer_design p span a {
   color: #DAC5A7;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 30, 31, 0.9);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+}
+.modal .modal_body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: all 0.8s ease 0s;
+}
+.modal .modal_body .modal_content {
+  max-width: 500px;
+  width: 100%;
+  background-color: #1d1e1f;
+  border-radius: 2px;
+  padding: 48px;
+  position: relative;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+.modal .modal_body .modal_close {
+  position: absolute;
+  right: 48px;
+  top: 10px;
+  font-family: "Onest", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #DAC5A7;
+  text-decoration: none;
+}
+.modal .modal_body .modal_title {
+  margin-bottom: 32px;
+}
+.modal .modal_body .modal_title h2 {
+  font-family: "Onest", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #DAC5A7;
+  font-size: 40px;
+  line-height: 120%;
+}
+.modal .modal_body .modal_text form {
+  width: 100%;
+  height: 100%;
+}
+.modal .modal_body .modal_text .form_box {
+  margin-bottom: 16px;
+}
+.modal .modal_body .modal_text input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background-color: rgba(218, 197, 167, 0.05);
+  color: #DAC5A7;
+  font-family: "Onest", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  border: 1px solid #DAC5A7;
+  outline: none;
+  appearance: none;
+}
+.modal .modal_body .modal_text input::placeholder {
+  font-family: "Onest", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #DAC5A7;
+  font-size: 16px;
+  font-weight: 300;
+}
+.modal .modal_body .modal_text input:focus {
+  border: none;
+}
+.modal .modal_body .modal_text textarea {
+  width: 100%;
+  min-height: 0;
+  padding: 15px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background-color: rgba(218, 197, 167, 0.05);
+  color: #DAC5A7;
+  font-family: "Onest", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  border: 1px solid #DAC5A7;
+  outline: none;
+  appearance: none;
+}
+.modal .modal_body .modal_text textarea::placeholder {
+  font-family: "Onest", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #DAC5A7;
+  font-size: 16px;
+  font-weight: 300;
+}
+.modal .modal_body .modal_text textarea:focus {
+  border: none;
+}
+.modal .modal_body .modal_text button {
+  width: 100%;
+  outline: none;
+  appearance: none;
+  padding: 15px;
+  border-radius: 2px;
+  background-color: #DAC5A7;
+  font-family: "Onest", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1d1e1f;
+  border: none;
+}
+.modal .modal_body .modal_text button:hover {
+  background-color: #8a785f;
+  cursor: pointer;
+}
+
+.modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal.open .modal_content {
+  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

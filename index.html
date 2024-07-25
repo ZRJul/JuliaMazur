@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<header>
+<header id="header" class="lock_padding">
     <div class="container d-flex">
         <div class="header_logo">
             <a href="#">
@@ -486,7 +486,7 @@
             <h3 data-lang="make_box_02">Let’s make website</h3>
             <h4 data-lang="make_box_03">that leaves a lasting impression!</h4>
             <h5 data-lang="make_box_04">Front end development to help you and your business stand out</h5>
-            <a href="#" data-lang="make_box_05">Get in touch</a>
+            <a href="#modal" class="modal_link" data-lang="make_box_05">Get in touch</a>
         </div>
 
     </div>
@@ -526,6 +526,36 @@
         <p>Layout design by <span><a href="https://templates.gola.io/" target="_blank">Pawel Gola.</a></span></p>
     </div>
 </footer>
+
+<div id="modal" class="modal">
+    <div class="modal_body">
+        <div class="modal_content">
+            <a href="#" class="modal_close close_modal">X</a>
+            <div class="modal_title">
+                <h2 data-lang="modal_title">Let's get in touch</h2>
+            </div>
+            <div class="modal_text">
+                <form action="#" method="post">
+                    <div class="name_box form_box">
+                        <label for="name"></label>
+                        <input id="name" type="text" name="Name" placeholder="Name" data-lang="placeholder_name">
+                    </div>
+                    <div class="email_box form_box">
+                        <label for="email"></label>
+                        <input id="email" type="email" name="Email" placeholder="Email" data-lang="placeholder_email">
+                    </div>
+                    <div class="message_box form_box">
+                        <label for="message"></label>
+                        <textarea id="message" name="Message" placeholder="Message" data-lang="placeholder_message"></textarea>
+                    </div>
+                    <div class="button_box text_centre">
+                        <button type="submit" data-lang="modal_button">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/languages.js"></script>
